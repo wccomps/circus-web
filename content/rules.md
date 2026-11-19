@@ -1,4 +1,4 @@
 ---
-title: "CIRCUS — 2026 Rules"
+title: "CIRCUS — 2026-27 Rules"
 type: rules
 ---
