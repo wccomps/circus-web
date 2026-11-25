@@ -4,9 +4,10 @@
     <div class="hero-title">About the C.I.R.C.U.S.</div>
     <p class="hero-tagline">
       A circus-themed collegiate competition where the spotlight is on incident response, not acrobatics.
+      Investigate a breach, write it up like a pro, and defend your findings in front of a mock audience.
     </p>
     <div class="hero-ribbon">
-      <span>Learn More</span> Mission · Structure · Audience
+      <span>Learn More</span> What you'll do · Tools · Reports &amp; Presentations · Both Divisions
     </div>
     <div class="hero-lights">
       <span></span><span></span><span></span><span></span>
@@ -23,6 +24,21 @@
     </p>
 
     <div class="card">
+      <h2>On this page</h2>
+      <ul>
+        <li><a href="#mission">Mission</a></li>
+        <li><a href="#what-teams-do">What do student teams do in CIRCUS?</a></li>
+        <li><a href="#tools">What tools can I use?</a></li>
+        <li><a href="#reports">What makes a strong report?</a></li>
+        <li><a href="#presentations">What makes a good presentation?</a></li>
+        <li><a href="#scoring">How is it scored?</a></li>
+        <li><a href="#divisions">Two divisions, two levels of competition</a></li>
+        <li><a href="#why">Why compete?</a></li>
+        <li><a href="#faq">Quick answers</a></li>
+      </ul>
+    </div>
+
+    <div class="card" id="mission">
       <h2>Mission</h2>
       <p>
         CIRCUS (Collegiate Incident Response Competition for Undergraduate Students) is designed to
@@ -36,7 +52,200 @@
       </p>
     </div>
 
-    <div class="card">
+    <div class="card" id="what-teams-do">
+      <h2>What do student teams do in CIRCUS?</h2>
+      <p>
+        Picture this: a new client has just called. Something bad has happened to their systems, and
+        they want to know exactly what. You are the incident response team they hired. Here is how
+        a CIRCUS season plays out:
+      </p>
+      <ol>
+        <li>
+          <strong>Form your team and register.</strong> Your school's roster can include up to seven
+          students, and up to five of them make up the competition team. A faculty or staff member
+          serves as your team representative, and you pick a team captain.
+        </li>
+        <li>
+          <strong>Meet your client.</strong> When the virtual phase opens, you receive a statement of
+          work describing the client, their concerns, and what they expect you to deliver, along with
+          download locations for "backed up" images of their systems.
+        </li>
+        <li>
+          <strong>Investigate.</strong> You get one to two weeks (set for each season) to dig into
+          several systems from the client's environment. Expect a mix of operating systems, logs,
+          files, and user activity. Your job is to work out what happened, when, how, and what was
+          affected.
+        </li>
+        <li>
+          <strong>Document as you go.</strong> Every artifact you find, where you found it, and how you
+          handled it goes into your notes. Good evidence handling is part of the game.
+        </li>
+        <li>
+          <strong>Write the incident report.</strong> Turn your analysis into a clear findings report
+          that tells the story of the breach and recommends what the client should do next. This is
+          the biggest part of your score.
+        </li>
+        <li>
+          <strong>Take the stage.</strong> Teams present their findings live to a simulated audience,
+          such as legal counsel, law enforcement, or a mock grand jury, and answer questions about
+          their work. See the <a href="/schedule/">schedule</a> for this season's Regional Final and
+          National Finals dates, and the <a href="/rules/">rules</a> for how teams advance.
+        </li>
+      </ol>
+      <p style="margin-top:0.6rem;">
+        <strong>Divide and conquer.</strong> Strong teams spread the work. Teammates might focus on
+        Windows systems, Linux systems, logs and timelines, and report writing, with one person keeping
+        the overall story straight. You do not need to be an expert in everything. You need to be a good
+        team.
+      </p>
+      <p style="margin-top:0.4rem;">
+        <strong>Expect it to feel like real life.</strong> Real incidents are rarely tidy. Evidence can
+        overlap, some oddities turn out to be normal, and the most important finding is not always the
+        loudest one. CIRCUS rewards teams who stay methodical and can explain why they reached each
+        conclusion.
+      </p>
+    </div>
+
+    <div class="card" id="tools">
+      <h2>What tools can I use?</h2>
+      <p>
+        CIRCUS is a <strong>forensics and incident response</strong> competition, so your toolbox is
+        about examining evidence, not attacking systems. Under the
+        <a href="/rules/">official rules</a>:
+      </p>
+      <ul>
+        <li>Open-source software and commercially available <strong>trial</strong> software are allowed (for example, Autopsy or CAINE).</li>
+        <li>Fully licensed commercial forensics tools that require a paid license (such as FTK) are not permitted.</li>
+        <li>You may download and use tools, copy files, and download systems (VMs and containers) as instructed for analysis, but you may not modify the configuration of competition systems.</li>
+        <li>Printed reference materials such as books and checklists are welcome.</li>
+        <li>Internet resources and AI tools may be used for research. Heavy reliance on them in your report or in correspondence with organizers may lower your score, so make sure the analysis and the words are yours.</li>
+        <li>Offensive activity against any system outside your assigned environment is grounds for disqualification. When in doubt, ask the Operations Team first.</li>
+      </ul>
+      <p style="margin-top:0.6rem;">
+        <strong>Free tools many teams explore</strong> (examples only, not an official or required list;
+        always confirm a tool fits the rules before you rely on it):
+      </p>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>What you're doing</th>
+            <th>Tools to look at</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Disk and file system analysis</td>
+            <td>Autopsy, The Sleuth Kit, CAINE, SIFT Workstation</td>
+          </tr>
+          <tr>
+            <td>Memory analysis</td>
+            <td>Volatility</td>
+          </tr>
+          <tr>
+            <td>Windows logs and artifacts</td>
+            <td>Event Viewer, PowerShell, RegRipper, Hayabusa, Chainsaw</td>
+          </tr>
+          <tr>
+            <td>Linux logs and artifacts</td>
+            <td>grep, awk, jq, journalctl, and the logs under /var/log</td>
+          </tr>
+          <tr>
+            <td>Timelines</td>
+            <td>Plaso (log2timeline), Timesketch, or a well-organized spreadsheet</td>
+          </tr>
+          <tr>
+            <td>Network evidence</td>
+            <td>Wireshark, Zeek</td>
+          </tr>
+          <tr>
+            <td>Decoding and quick analysis</td>
+            <td>CyberChef</td>
+          </tr>
+          <tr>
+            <td>Describing attacker behavior</td>
+            <td>MITRE ATT&amp;CK as a shared vocabulary</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:0.6rem;">
+        <strong>Tip:</strong> Practice with your toolkit before the competition starts. The team that
+        already knows its tools spends its time thinking about the case instead of installing software.
+      </p>
+    </div>
+
+    <div class="card" id="reports">
+      <h2>What makes a strong report?</h2>
+      <p>
+        The findings report carries about <span class="highlight">half of your total score</span>, so
+        it is worth planning the writing as carefully as the analysis. Reports are judged on sound
+        forensic practice, how well you documented what you found, and the overall narrative of the
+        breach. Strong reports usually include:
+      </p>
+      <ul>
+        <li><strong>An executive summary</strong> a non-technical reader can understand in two minutes: what happened, how bad it is, and what to do first.</li>
+        <li><strong>A clear timeline</strong> showing the order of events, with the evidence behind each entry.</li>
+        <li><strong>Evidence for every claim:</strong> where the artifact was found, what it shows, and how you handled it.</li>
+        <li><strong>Facts kept apart from conclusions.</strong> Say what you observed, then say what you think it means and how confident you are.</li>
+        <li><strong>Scope and limits:</strong> what you could not determine, and why.</li>
+        <li><strong>Practical recommendations</strong> for containment, recovery, and preventing a repeat.</li>
+        <li><strong>Professional polish:</strong> consistent formatting, readable screenshots, and clean writing. One final read-through by someone who did not write it helps a lot.</li>
+      </ul>
+    </div>
+
+    <div class="card" id="presentations">
+      <h2>What makes a good presentation?</h2>
+      <p>
+        Finalist teams present in a 45- to 60-minute session to a simulated audience, such as legal
+        counsel, law enforcement, or a mock grand jury, and answer questions about their findings.
+        Judges look at professionalism, mastery of the report, and how clearly you explain your methods
+        and conclusions. Here is what tends to impress:
+      </p>
+      <ul>
+        <li><strong>Know the whole story.</strong> Every team member should be able to speak to the full case, not just their own section.</li>
+        <li><strong>Speak to the audience.</strong> Explain technical details in plain language, as if to a jury or a company executive.</li>
+        <li><strong>Lead with the answer,</strong> then back it up with evidence. Tell them what happened before you show them how you know.</li>
+        <li><strong>Be honest about uncertainty.</strong> "The evidence suggests this, but we could not confirm that" is a strong answer.</li>
+        <li><strong>Keep visuals simple.</strong> A clean timeline beats a wall of screenshots.</li>
+        <li><strong>Rehearse the questions.</strong> Have teammates grill you the way opposing counsel would.</li>
+        <li><strong>Look and act like a professional team.</strong> Show up prepared, respect the process, and support one another.</li>
+      </ul>
+    </div>
+
+    <div class="card" id="scoring">
+      <h2>How is it scored?</h2>
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th>Component</th>
+            <th>Approx. weight</th>
+            <th>What judges look for</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Artifact Discovery</td>
+            <td>~25%</td>
+            <td>Finding and correctly interpreting the artifacts that matter to the investigation</td>
+          </tr>
+          <tr>
+            <td>Findings Report</td>
+            <td>~50%</td>
+            <td>Sound forensic practices, documentation quality, and a clear narrative of the breach</td>
+          </tr>
+          <tr>
+            <td>Final Presentation</td>
+            <td>~25%</td>
+            <td>Professionalism, mastery of the report, and clarity in explaining methods and conclusions</td>
+          </tr>
+        </tbody>
+      </table>
+      <p style="margin-top:0.6rem;">
+        The takeaway: you do not have to find everything to do well. Teams that document carefully and
+        communicate clearly can beat teams that find more but explain less.
+      </p>
+    </div>
+
+    <div class="card" id="what-makes-unique">
       <h2>What Makes CIRCUS Unique?</h2>
       <ul>
         <li>A strong emphasis on <strong>process</strong> — not just tools or "flag hunting".</li>
@@ -47,37 +256,74 @@
       </ul>
     </div>
 
-    <div class="card">
-      <h2>How the Competition Works</h2>
+    <div class="card" id="divisions">
+      <h2>Two divisions, two levels of competition</h2>
+      <p>
+        CIRCUS is open to undergraduate students from every kind of school, and teams are judged
+        against schools like their own:
+      </p>
       <ul>
-        <li>
-          <strong>Virtual Phase:</strong> Teams receive a statement of work and forensic images or
-          logs from a compromised environment. They conduct analysis, document artifacts, and submit
-          a formal incident report.
-        </li>
-        <li>
-          <strong>Finals:</strong> Top teams in each division are invited to present their findings
-          in person at the finals (currently planned to be hosted at SCALE in Pasadena, CA).
-        </li>
-        <li>
-          <strong>Scoring:</strong> Scores combine artifact discovery, written reporting, and the
-          quality of the final presentation and Q&amp;A.
-        </li>
+        <li><strong>Division I:</strong> four-year colleges and universities, or community colleges with a bachelor's degree program in information technology, computer science, cybersecurity, or a similar discipline.</li>
+        <li><strong>Division II:</strong> two-year colleges and trade schools that do not offer such a four-year degree.</li>
+      </ul>
+      <p style="margin-top:0.4rem;">
+        Each division has its own judges and its own judging panels, and teams are scored separately.
+        Two-year and four-year teams do the same kind of work on a level playing field, and both
+        divisions have a path to the finals.
+      </p>
+      <p style="margin-top:0.4rem;">
+        Teams often include students from computer information systems, computer science, cybersecurity,
+        digital forensics, networking, criminal justice, and related fields. Competitors need to be at
+        least part-time students, and any major or certificate program counts. Check the
+        <a href="/rules/">rules</a> for the full eligibility details.
+      </p>
+    </div>
+
+    <div class="card" id="why">
+      <h2>Why compete?</h2>
+      <ul>
+        <li><strong>Practice the real job.</strong> Incident responders investigate, document, and then explain their work to people who were not there. CIRCUS has you do all three.</li>
+        <li><strong>Build something for your resume.</strong> A real investigation, a professional report, and a live presentation give you concrete things to talk about in interviews.</li>
+        <li><strong>Grow your communication skills.</strong> Writing for executives and testifying before a mock audience is a skill employers notice.</li>
+        <li><strong>Learn as a team.</strong> You succeed by combining different strengths, from log analysis to writing.</li>
+        <li><strong>Get guidance.</strong> Your faculty or staff representative can coach you through the virtual phase and report writing.</li>
+        <li><strong>Have fun.</strong> Serious skills, playful theme. The circus motif keeps things welcoming, and you will make friends along the way.</li>
       </ul>
     </div>
 
+    <div class="card" id="faq">
+      <h2>Quick answers</h2>
+      <p><strong>Is this just an online qualifier?</strong><br>
+      No. CIRCUS has a virtual investigation-and-report phase and a live presentation phase in front
+      of judges. Both matter, and the report counts the most.</p>
+      <p style="margin-top:0.6rem;"><strong>Do I need to know offensive hacking?</strong><br>
+      No. CIRCUS is about forensics and incident response. You examine evidence and explain what
+      happened. You do not attack anything.</p>
+      <p style="margin-top:0.6rem;"><strong>How big is a team?</strong><br>
+      A roster can have up to seven students, and up to five of them make up the competition team.</p>
+      <p style="margin-top:0.6rem;"><strong>Can my school enter more than one team?</strong><br>
+      Yes. A school may field as many teams as it wishes in the virtual portion, but only one team
+      per school can advance to the final.</p>
+      <p style="margin-top:0.6rem;"><strong>Can a professor or advisor help?</strong><br>
+      Your faculty or staff representative may coach and advise during the virtual and report-writing
+      portion. Once a live event begins, they can observe but not coach.</p>
+      <p style="margin-top:0.6rem;"><strong>Where and when are the finals?</strong><br>
+      See the <a href="/schedule/">schedule</a> for this season's Regional Finals and the National
+      Finals at SCALE in Pasadena, California.</p>
+    </div>
+
     <div class="card">
-      <h2>Who Should Participate?</h2>
+      <h2>Ready to join the show?</h2>
       <p>
-        CIRCUS is open to undergraduate students from:
+        Gather your teammates, find a faculty or staff representative, and step right up. Everything
+        you need to register your team is on the signup page.
       </p>
-      <ul>
-        <li>Community colleges and trade schools (Division II)</li>
-        <li>Four-year colleges and universities (Division I)</li>
-      </ul>
-      <p style="margin-top:0.4rem;">
-        Teams often include students from computer information systems, computer science, cybersecurity,
-        digital forensics, networking, criminal justice, and related fields.
+      <p style="margin-top:0.75rem;">
+        <a href="/signup/" class="button-primary">Register Your Team</a>
+        &nbsp;
+        <a href="/rules/" class="button-primary">Read the Rules</a>
+        &nbsp;
+        <a href="/schedule/" class="button-primary">See the Schedule</a>
       </p>
     </div>
   </section>
